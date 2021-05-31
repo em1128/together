@@ -1,8 +1,8 @@
 :root {
     --text-color: #101010;    
     --main-color: #8c694a;
-    --highlight-color: #68C9DE;
-    --highlight-color-alt: #277F91;
+    --point-color: #68C9DE;
+    --point-color-alt: #277F91;
 
     --main-red-color: #f25c5c;
     --main-red-color-alt: #f2508b;
@@ -26,19 +26,15 @@
 
 header {
     position:fixed; 
-    top: 0;  
-    left: 0; 
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
     padding: 20px 40px;
-    
+    z-index: 10;
 }
 
-header.sticky {
-    color: var(--highlight-color-alt);
+header.navbar {
+    color: var(--point-color-alt);
     background: var(--header-color);
     padding: 20px 40px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -68,7 +64,7 @@ ul button a {
 }
 
 a:hover {
-    color: var(--highlight-color);
+    color: var(--point-color);
 }
 
 
@@ -93,6 +89,26 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+button:hover {
+    cursor: pointer;
+}
+.search-form{
+    z-index: 0;
+    
+}
+.user-name-search-form{
+    position: relative;
+    width: 624px;
+    height: 50px;
+    bottom: 512px;
+    left: 25%;
+}
+.user-name-search-form__button{
+    position: relative;
+    bottom: 512px;
+    left: 25%;
 }
 
 .about {
